@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 99%;
+    --foreground: 210 20% 13%;
+
+    --card: 210 33% 100%;
+    --card-foreground: 210 20% 13%;
+
+    --popover: 210 33% 100%;
+    --popover-foreground: 210 20% 13%;
+
+    --primary: 162 100% 18%;  /* Myti Green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 100% 48%; /* Myti Orange */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 20% 50%;
+
+    --accent: 43 100% 47%;   /* Myti Yellow */
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 0 91% 76%; /* Myti Pink */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 162 100% 18%;    /* Myti Green */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 29% 9%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 29% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 29% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 162 100% 18%;  /* Myti Green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 100% 48%; /* Myti Orange */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 43 100% 47%;   /* Myti Yellow */
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 0 91% 76%; /* Myti Pink */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 26%;
+    --input: 210 20% 26%;
+    --ring: 162 100% 18%;    /* Myti Green */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl leading-tight text-primary;
+  }
+
+  h2 {
+    @apply text-3xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl leading-tight;
+  }
+
+  h4 {
+    @apply text-xl leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .transition-ultra-slow {
+    transition-duration: 1000ms;
+  }
+  
+  .transition-slow {
+    transition-duration: 500ms;
+  }
+  
+  .transition-medium {
+    transition-duration: 300ms;
+  }
+  
+  .transition-bezier {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
