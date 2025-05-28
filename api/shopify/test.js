@@ -14,8 +14,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const shopifyUrl = process.env.VITE_SHOPIFY_STORE_URL;
-    const accessToken = process.env.VITE_SHOPIFY_ACCESS_TOKEN;
+    const shopifyUrl = process.env.VITE_SHOPIFY_STORE_URL || process.env.SHOPIFY_STORE_URL;
+    const accessToken = process.env.VITE_SHOPIFY_ACCESS_TOKEN || process.env.SHOPIFY_ACCESS_TOKEN;
     
     // Debug logging
     console.log('Environment check:');
