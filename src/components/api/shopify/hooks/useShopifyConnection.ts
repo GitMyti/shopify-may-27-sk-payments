@@ -136,12 +136,16 @@ export const useShopifyConnection = ({ onConnectionSuccess }: UseShopifyConnecti
     
     try {
       // Validate input
-      if (!credentials.accessToken) {
-        toast.error('Please enter your Shopify access token');
-        setConnectionError('Missing access token');
-        setIsLoading(false);
-        return;
-      }
+      //if (!credentials.accessToken) {
+       // toast.error('Please enter your Shopify access token');
+       // setConnectionError('Missing access token');
+      //  setIsLoading(false);
+        //return;
+     // }
+      
+      // Skip validation - API uses environment variables
+// No need to validate access token since backend uses env vars
+console.log('Using environment variables from API');
       
       // Test connection using direct API call
       console.log('Testing connection to Shopify API:', credentials.shopUrl);
