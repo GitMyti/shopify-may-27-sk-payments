@@ -27,7 +27,7 @@ const saveShopifyCredentials = (credentials: ShopifyCredentials) => {
 // Direct API call to your Vercel backend
 const testShopifyConnection = async (credentials: ShopifyCredentials) => {
   try {
-    const response = await fetch('/api/shopify/test', {
+    const response = await fetch(`${window.location.origin}/api/shopify/test`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
